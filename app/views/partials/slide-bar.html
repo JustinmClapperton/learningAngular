@@ -1,13 +1,13 @@
 <div ng-if="element.type == 'SlideBar'">
-    <label for="{{element.Id}}">{{element.id}}</label>
-    <input type="range" value="50" name="{{element.Id}}" min="{{element.min}}" max="{{element.max}}" value="{{element.value}}" id="{{element.Id}}"/>
-    <!--<input id="{{element.Id}}" name="{{element.id}}" type="text" class="span2" value="" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="50" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="show">-->
+    <label for="{{element.Id}}">{{element.id}}: 50</label>
+    <input class="ui-slider" type="range"  name="{{element.Id}}" min="{{element.min}}" max="{{element.max}}" value="{{element.value}}" id="{{element.Id}}"/>
+
 </div>
 
 <div ng-if="element.type == 'Button'">
     <div class="btn-group btn-group-justified">
         <div class="btn-group">
-            <button type="button" class="btn btn-primary">{{element.id}}</button>
+            <button type="button" class="btn btn-default">{{element.id}}</button>
         </div>
     </div>
 </div>
@@ -26,10 +26,10 @@
             </div>
 
         </ul>
-    </div><span class="label label-success">{{selectedOption}}</span>
-    <select class="form-control">
+    </div><span style="font-size:15px" class="label label-success">{{selectedOption}}</span>
+    <!--<select class="form-control">-->
 
-        <option ng-repeat="option in element.value" value="{{element.value[$index]}}">{{element.choices[$index]}}</option>
+        <!--<option ng-repeat="option in element.value" value="{{element.value[$index]}}">{{element.choices[$index]}}</option>-->
 
-    </select>
+    <!--</select>-->
 </div>
