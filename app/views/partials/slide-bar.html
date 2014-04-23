@@ -1,0 +1,7 @@
+<div ng-if="element.type == 'slideBar'">
+<label for="{{element.Id}}">{{element.id}}</label>
+<input  type="range" value="50" name="{{element.Id}}" id="{{element.Id}}"/>
+    <!--<input id="{{element.Id}}" name="{{element.id}}" type="text" class="span2" value="" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="50" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="show">-->
+</div>
+
+<div ng-if="element.type == 'button'"><button type="button" class="btn btn-primary" >{{element.id}}</button></div>

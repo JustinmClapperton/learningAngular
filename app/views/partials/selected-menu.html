@@ -1,0 +1,30 @@
+
+
+<div>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <h1 class="text-center">{{elementPage}}</h1>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <button ng-click="backToView()">Go Back</button>
+
+    <div ng-repeat="element in elementArray | filter:elementPage">
+        <!--<div>{{element.type}} and {{element.id}}</div>-->
+        <div element="element" my-customer=""></div>
+    </div>
+
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <h1 class="text-center">Back</h1>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+</div>
