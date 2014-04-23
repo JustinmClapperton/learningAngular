@@ -15,16 +15,12 @@ var webPracticeApp = angular.module('webPracticeApp')
 
 
             $scope.size = 2,
-            $scope.goToView = function () {
+            $scope.goToView1 = function (id, info) {
                 elementURL = "views/partials/slide-bar.html";
-
-                $location.path("/views/partials/" + menuArray[1]);
-            },
-            $scope.goToView1 = function () {
-                elementURL = "views/partials/slide-bar.html";
+                elementMenu = id;
 
 
-                $location.path("/views/partials/" + menuArray[0]);
+                $location.path("/views/partials/" + info);
             }
 
     });

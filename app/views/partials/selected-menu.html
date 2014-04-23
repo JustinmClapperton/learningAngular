@@ -13,7 +13,7 @@
 
     <button ng-click="backToView()">Go Back</button>
 
-    <div ng-repeat="element in elementArray | filter:elementPage">
+    <div ng-repeat="element in elementArray | exactMatchFilter:elementMenu">
         <!--<div>{{element.type}} and {{element.id}}</div>-->
         <div element="element" my-customer=""></div>
     </div>

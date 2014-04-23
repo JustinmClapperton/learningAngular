@@ -3,8 +3,9 @@
 webPracticeApp.controller('viewController', function($scope, $location, $routeParams){
     $scope.viewId = $routeParams.viewId,
     $scope.elementName =$routeParams.viewId,
-    $scope.elementArray = elementArray,
+    $scope.elementArray = menuElements,
     $scope.elementPage = $routeParams.viewId,
+    $scope.elementMenu = elementMenu,
     //$scope.menuPage = element
     $scope.setElementUrl = function(){
 

@@ -21,7 +21,8 @@ webPracticeApp.directive('myCustomer', function () {
         },
         templateUrl: elementURL,
         controller: function ($scope) {
-//            console.log("hello");
+            var test = JSON.stringify($scope.element);
+            console.log("menuElement: " + test);
             console.log($scope.element.type)
 
         }

@@ -13,13 +13,13 @@
     <div ng-repeat="buttons in menuButtons | exactMatchFilter:'AdvancedMenu':'LinkButton'">
 
         <div class="btn-group btn-group-justified">
-            <!--Button 1-->
+          <!--Button 1-->
             <div class="btn-group">
-                <button type="button" id="{{buttons.button0.id}}" class="btn btn-default" ng-click="goToView1()">{{buttons.button0.info}}</button>
+                <button type="button" class="btn btn-default" ng-click="goToView1(buttons['button' + $index*2].id, buttons['button' + $index*2].info)">{{buttons["button" + $index*2].info}}</button>
             </div>
                <!--Button 2-->
-            <div ng-if="buttons.button1" class="btn-group">
-                <button type="button" class="btn btn-default" ng-click="goToView1()">{{buttons.button1.info}}</button>
+            <div class="btn-group">
+                <button type="button" class="btn btn-default" ng-click="goToView1(buttons['button' + ($index*2 + 1)].id, buttons['button' + ($index*2 + 1)].info)">{{buttons["button" + ($index*2 + 1)].info}}</button>
             </div>
         </div>
     </div>
