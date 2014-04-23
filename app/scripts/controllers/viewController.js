@@ -6,6 +6,7 @@ webPracticeApp.controller('viewController', function($scope, $location, $routePa
     $scope.elementArray = menuElements,
     $scope.elementPage = $routeParams.viewId,
     $scope.elementMenu = elementMenu,
+
     //$scope.menuPage = element
     $scope.setElementUrl = function(){
 
@@ -15,5 +16,6 @@ webPracticeApp.controller('viewController', function($scope, $location, $routePa
 
         $location.path("/views/main.html");
     }
+
 
 })

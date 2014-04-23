@@ -1,27 +1,29 @@
 var controllerVar = "testThis";
-var elementArray = [{type:"button", id:"button1", page:"menu1"},
-                    {type:"button", id:"button2", page:"menu1"},
-                    {type:"slideBar", id:"slide1", page:"menu1"},
-                    {type:"button", id:"button3", page:"menu2"},
-                    {type:"slideBar", id:"slide2", page:"menu2"}];
+var elementArray = [
+    {type: "button", id: "button1", page: "menu1"},
+    {type: "button", id: "button2", page: "menu1"},
+    {type: "slideBar", id: "slide1", page: "menu1"},
+    {type: "button", id: "button3", page: "menu2"},
+    {type: "slideBar", id: "slide2", page: "menu2"}
+];
 var elementPage = "menu1";
 var menuArray = ["menu1", "menu2"];
 
 
 function menuElement(type, id, menu, info, value, minVal, maxVal, choices, link, columnValue, dataValue, advanced) {
-    this.type      = type;
-    this.id        = id;
-    this.menu      = menu;
-    this.info      = info;
-    this.value     = value;
-    this.min       = minVal;
-    this.max       = maxVal;
-    this.choices   = choices;
-    this.link      = link;
-    this.column    = columnValue;
+    this.type = type;
+    this.id = id;
+    this.menu = menu;
+    this.info = info;
+    this.value = value;
+    this.min = minVal;
+    this.max = maxVal;
+    this.choices = choices;
+    this.link = link;
+    this.column = columnValue;
     this.dataValue = dataValue;
-    this.advanced  = advanced;
-    this.setValue  = function () {
+    this.advanced = advanced;
+    this.setValue = function () {
         this.value = this.dataValue;
         console.log(this.value);
     }
@@ -52,53 +54,53 @@ var dataStruct = [
     ["OpenMenuPage", "advanced", "AdvancedMenu", "Advanced"],
     ["DataLabel", "firmwareRev", "AdvancedMenu", "Firmware Rev: ", "No Unit"],
     ["DataLabel", "serialNumber", "AdvancedMenu", "Serial Number: ", "No Unit"],
-    ["LinkButton", "BluetoothPage", "AdvancedMenu", "Bluetooth",0,0,0,0, "#bluetoothMenu"],
-    ["LinkButton", "FilesPage", "AdvancedMenu", "Files",0,0,0,0, "#filesMenu"],
-    ["LinkButton", "UtilityPage", "AdvancedMenu", "Utility",0,0,0,0, "#utilityMenu"],
-    ["LinkButton", "PilotInputsPage", "AdvancedMenu", "Pilot Inputs",0,0,0,0, "#pilotInputsMenu"],
-    ["LinkButton", "GyroSensesPage", "AdvancedMenu", "Gyro Senses",0,0,0,0, "#gyroSensesMenu"],
-    ["LinkButton", "GpsDataPage", "AdvancedMenu", "GPS Data",0,0,0,0, "#gpsDataMenu"],
-    ["LinkButton", "RecieverPage", "AdvancedMenu", "Reciever",0,0,0,0, "#recieverMenu"],
-    ["LinkButton", "OrientationPage", "AdvancedMenu", "Orientation",0,0,0,0, "#orientationMenu"],
-    ["LinkButton", "ControlPage", "AdvancedMenu", "Control",0,0,0,0, "#controlMenu"],
-    ["LinkButton", "DriveSystemPage", "AdvancedMenu", "DriveSystem",0,0,0,0, "#driveSystemMenu"],
-    ["LinkButton", "GovernorSettingsPage", "AdvancedMenu", "Gov Settings",0,0,0,0, "#govSettingsMenu"],
-    ["LinkButton", "GpsSettingsPage", "AdvancedMenu", "GPS Settings",0,0,0,0, "#gpsSettingsMenu"],
-    ["LinkButton", "SwashMixingPage", "AdvancedMenu", "Swash Mixing",0,0,0,0, "#swashMixingMenu"],
-    ["LinkButton", "SwashServoPage", "AdvancedMenu", "Swash Servo",0,0,0,0, "#swashServoMenu"],
-    ["LinkButton", "TailServoPage", "AdvancedMenu", "Tail Servo",0,0,0,0, "#tailServoMenu"],
-    ["LinkButton", "CyclicBank1Page", "AdvancedMenu", "Cyc Bank 1",0,0,0,0, "#cycBank1Menu"],
-    ["LinkButton", "CyclicBank2Page", "AdvancedMenu", "Cyc Bank 2",0,0,0,0, "#cycBank2Menu"],
-    ["LinkButton", "TailBank1Page", "AdvancedMenu", "Tail Bank 1",0,0,0,0, "#tailBank1Menu"],
-    ["LinkButton", "TailBank2Page", "AdvancedMenu", "Tail Bank 2",0,0,0,0, "#tailBank2Menu"],
-    ["CloseMenuPage", "closeAdvancedPage", "AdvancedMenu", "Basic",0,0,0,0,"#basic",0,0, true],
+    ["LinkButton", "BluetoothPage", "AdvancedMenu", "Bluetooth", 0, 0, 0, 0, "#bluetoothMenu"],
+    ["LinkButton", "FilesPage", "AdvancedMenu", "Files", 0, 0, 0, 0, "#filesMenu"],
+    ["LinkButton", "UtilityPage", "AdvancedMenu", "Utility", 0, 0, 0, 0, "#utilityMenu"],
+    ["LinkButton", "PilotInputsPage", "AdvancedMenu", "Pilot Inputs", 0, 0, 0, 0, "#pilotInputsMenu"],
+    ["LinkButton", "GyroSensesPage", "AdvancedMenu", "Gyro Senses", 0, 0, 0, 0, "#gyroSensesMenu"],
+    ["LinkButton", "GpsDataPage", "AdvancedMenu", "GPS Data", 0, 0, 0, 0, "#gpsDataMenu"],
+    ["LinkButton", "RecieverPage", "AdvancedMenu", "Reciever", 0, 0, 0, 0, "#recieverMenu"],
+    ["LinkButton", "OrientationPage", "AdvancedMenu", "Orientation", 0, 0, 0, 0, "#orientationMenu"],
+    ["LinkButton", "ControlPage", "AdvancedMenu", "Control", 0, 0, 0, 0, "#controlMenu"],
+    ["LinkButton", "DriveSystemPage", "AdvancedMenu", "DriveSystem", 0, 0, 0, 0, "#driveSystemMenu"],
+    ["LinkButton", "GovernorSettingsPage", "AdvancedMenu", "Gov Settings", 0, 0, 0, 0, "#govSettingsMenu"],
+    ["LinkButton", "GpsSettingsPage", "AdvancedMenu", "GPS Settings", 0, 0, 0, 0, "#gpsSettingsMenu"],
+    ["LinkButton", "SwashMixingPage", "AdvancedMenu", "Swash Mixing", 0, 0, 0, 0, "#swashMixingMenu"],
+    ["LinkButton", "SwashServoPage", "AdvancedMenu", "Swash Servo", 0, 0, 0, 0, "#swashServoMenu"],
+    ["LinkButton", "TailServoPage", "AdvancedMenu", "Tail Servo", 0, 0, 0, 0, "#tailServoMenu"],
+    ["LinkButton", "CyclicBank1Page", "AdvancedMenu", "Cyc Bank 1", 0, 0, 0, 0, "#cycBank1Menu"],
+    ["LinkButton", "CyclicBank2Page", "AdvancedMenu", "Cyc Bank 2", 0, 0, 0, 0, "#cycBank2Menu"],
+    ["LinkButton", "TailBank1Page", "AdvancedMenu", "Tail Bank 1", 0, 0, 0, 0, "#tailBank1Menu"],
+    ["LinkButton", "TailBank2Page", "AdvancedMenu", "Tail Bank 2", 0, 0, 0, 0, "#tailBank2Menu"],
+    ["CloseMenuPage", "closeAdvancedPage", "AdvancedMenu", "Basic", 0, 0, 0, 0, "#basic", 0, 0, true],
 ////////////////////////////////////////////////////////////////////////////////////////
     ["OpenPage", "bluetoothMenu", "BluetoothPage", "Bluetooth"],
     ["DataLabel", "bluetoothStatus", "BluetoothPage", "Bluetooth Status: ", "Working"],
     ["DataLabel", "bluetoothStatus2", "BluetoothPage", "Message Precentage: ", "Working"],
-    ["Button", "scanButton", "BluetoothPage", "Scan" ,0,0,0,0,0,0,"app.createList()"],
-    ["Button", "connectButton", "BluetoothPage", "Connect" ,0,0,0,0,0,0,"app.connectBle()"],
-    ["Button", "disconnectButton", "BluetoothPage", "Disconnect" ,0,0,0,0,0,0,"app.disconnectBle()"],
-    ["Button", "writeButton", "BluetoothPage", "Write" ,0,0,0,0,0,0,"app.buildSetupMenu()"],
-    ["SelectMenu", "deviceAddress", "BluetoothPage", "Device",[0] ,0,0, [""]],
+    ["Button", "scanButton", "BluetoothPage", "Scan" , 0, 0, 0, 0, 0, 0, "app.createList()"],
+    ["Button", "connectButton", "BluetoothPage", "Connect" , 0, 0, 0, 0, 0, 0, "app.connectBle()"],
+    ["Button", "disconnectButton", "BluetoothPage", "Disconnect" , 0, 0, 0, 0, 0, 0, "app.disconnectBle()"],
+    ["Button", "writeButton", "BluetoothPage", "Write" , 0, 0, 0, 0, 0, 0, "app.buildSetupMenu()"],
+    ["SelectMenu", "deviceAddress", "BluetoothPage", "Device", [0] , 0, 0, [""]],
     ["DataLabel", "bluetoothMessage", "BluetoothPage", "Bluetooth Message: ", ""],
     ["TextBox", "bluetoothWrite", "BluetoothPage", "Write Data Here", ""],
     ["ClosePage", "bluetoothClose", "BluetoothPage"],
 ////////////////////////////////////////////////////////////////////////////////////////
     ["OpenPage", "filesMenu", "FilesPage", "Files"],
     ["TextBox", "fileName", "FilesPage", "Rename: ", "test my name"],
-    ["Button", "recieveFromGyro", "FilesPage", "Recieve File From Gyro" ,0,0,0,0,0,0,"app.requestSetup()"],
-    ["Button", "sendToGyro", "FilesPage", "Send File To Gyro" ,0,0,0,0,0,0,"app.storeData()"],
-    ["Button", "setDefault", "FilesPage", "Set To Default",0,0,0,0,0, "Hello World"],
+    ["Button", "recieveFromGyro", "FilesPage", "Recieve File From Gyro" , 0, 0, 0, 0, 0, 0, "app.requestSetup()"],
+    ["Button", "sendToGyro", "FilesPage", "Send File To Gyro" , 0, 0, 0, 0, 0, 0, "app.storeData()"],
+    ["Button", "setDefault", "FilesPage", "Set To Default", 0, 0, 0, 0, 0, "Hello World"],
     ["ClosePage", "filesClose", "FilesPage"],
 ////////////////////////////////////////////////////////////////////////////////////////
     ["OpenPage", "utilityMenu", "UtilityPage", "Utility"],
     ["DataLabel", "errorState", "UtilityPage", "Error State: ", "state"],
     ["DataLabel", "lastVibLevel", "UtilityPage", "Last Vib Level: ", "0.0"],
     ["DataLabel", "logCounter", "UtilityPage", "Log Counter: ", "0"],
-    ["Button", "resetLog", "UtilityPage", "Reset Log Counter",0,0,0,0,0, "resetLogCount()"],
-    ["Button", "bindSat", "UtilityPage", "Bind satellite RX's",0,0,0,0,0, "bindSatelliteRx()"],
-    ["Button", "formatLog", "UtilityPage", "Format Log Drive",0,0,0,0,0, "formatLogDrive()"],
+    ["Button", "resetLog", "UtilityPage", "Reset Log Counter", 0, 0, 0, 0, 0, "resetLogCount()"],
+    ["Button", "bindSat", "UtilityPage", "Bind satellite RX's", 0, 0, 0, 0, 0, "bindSatelliteRx()"],
+    ["Button", "formatLog", "UtilityPage", "Format Log Drive", 0, 0, 0, 0, 0, "formatLogDrive()"],
     ["ClosePage", "utilityClose", "UtilityPage"],
 ////////////////////////////////////////////////////////////////////////////////////////
     ["OpenPage", "pilotInputsMenu", "PilotInputsPage", "Pilot Inputs"],
@@ -137,23 +139,23 @@ var dataStruct = [
 ////////////////////////////////////////////////////////////////////////////////////////
     ["OpenPage", "recieverMenu", "RecieverPage", "Reciever"],
     ["SlideBar", "tailGain1", "PilotInputsPage", "Tail Gain", 50, 0, 100],
-    ["SelectMenu", "recieverType", "RecieverPage", "Type", [0,1,2,3,4,5,6,7,8,9,10],0,0, ["Spektrum/JR Sats 2048 Res", "Spektrum/JR Sats 1024 Res", "Spektrum DSMX Sats",
+    ["SelectMenu", "recieverType", "RecieverPage", "Type", [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 0, 0, ["Spektrum/JR Sats 2048 Res", "Spektrum/JR Sats 1024 Res", "Spektrum DSMX Sats",
         "Futaba S-Bus,Futaba / JETI PPM", "Traditional Receiver", "Graupner/JR Sats 2048 Res",
         "Graupner/JR Sats 1024 Res", "JR DMSS,UDI / JR XbusB,Graupner"]],
-    ["SelectMenu", "aux0", "RecieverPage", "Aux 0", [0,1,2,3,4,5,6,7],4,0, ["Cyclic Gain/Bank","Tail Gain/Bank", "GPS Mode", "GPS Altitude Gain",
+    ["SelectMenu", "aux0", "RecieverPage", "Aux 0", [0, 1, 2, 3, 4, 5, 6, 7], 4, 0, ["Cyclic Gain/Bank", "Tail Gain/Bank", "GPS Mode", "GPS Altitude Gain",
         "Governor Gain", "Cyclic Gain", "Bell Gain", "Self Level Gain"]],
-    ["SelectMenu", "aux1", "RecieverPage", "Aux 1", [0,1,2,3,4,5,6,7],3,0, ["Cyclic Gain/Bank", "Tail Gain/Bank", "GPS Mode", "GPS Altitude Gain",
+    ["SelectMenu", "aux1", "RecieverPage", "Aux 1", [0, 1, 2, 3, 4, 5, 6, 7], 3, 0, ["Cyclic Gain/Bank", "Tail Gain/Bank", "GPS Mode", "GPS Altitude Gain",
         "Governor Gain", "Cyclic Gain", "Bell Gain", "Self Level Gain"]],
-    ["SelectMenu", "aux2", "RecieverPage", "Aux 2", [0,1,2,3,4,5,6,7],0,0, ["Cyclic Gain/Bank", "Tail Gain/Bank", "GPS Mode", "GPS Altitude Gain",
+    ["SelectMenu", "aux2", "RecieverPage", "Aux 2", [0, 1, 2, 3, 4, 5, 6, 7], 0, 0, ["Cyclic Gain/Bank", "Tail Gain/Bank", "GPS Mode", "GPS Altitude Gain",
         "Governor Gain", "Cyclic Gain", "Bell Gain", "Self Level Gain"]],
-    ["SelectMenu", "aux3", "RecieverPage", "Aux 3", [0,1,2,3,4,5,6,7],0,0, ["Cyclic Gain/Bank", "Tail Gain/Bank", "GPS Mode", "GPS Altitude Gain",
+    ["SelectMenu", "aux3", "RecieverPage", "Aux 3", [0, 1, 2, 3, 4, 5, 6, 7], 0, 0, ["Cyclic Gain/Bank", "Tail Gain/Bank", "GPS Mode", "GPS Altitude Gain",
         "Governor Gain", "Cyclic Gain", "Bell Gain", "Self Level Gain"]],
     ["Button", "stickCenter", "RecieverPage", "Set Stick Center", "setStickCenters()"],
     ["Button", "stickLimit", "RecieverPage", "Set Stick Limits", "setStickLimits()"],
     ["ClosePage", "recieverClose", "RecieverPage"],
 ////////////////////////////////////////////////////////////////////////////////////////
     ["OpenPage", "orientationMenu", "OrientationPage", "Orientation"],
-    ["SelectMenu", "servoBusOrientation", "OrientationPage", "Servo Bus", [0,8,3,11],3,0, ["Forward", "Left", "Aft", "Right"]],
+    ["SelectMenu", "servoBusOrientation", "OrientationPage", "Servo Bus", [0, 8, 3, 11], 3, 0, ["Forward", "Left", "Aft", "Right"]],
     ["Switch", "upsideDown", "OrientationPage", "Upside Down", ["No", "Yes"], 0],
     ["Switch", "counterClockwise", "OrientationPage", "Counter Clockwise", ["No", "Yes"]],
     ["ClosePage", "orientationClose", "OrientationPage"],
@@ -163,19 +165,19 @@ var dataStruct = [
     ["SlideBar", "aileronDeadband", "ControlPage", "Aileron Deadband %", "0", "0", "5"],
     ["SlideBar", "rudderDeadband", "ControlPage", "Rudder Deadband %", "0", "0", "5"],
     ["Switch", "slLinkLost", "ControlPage", "Self Level if Link is Lost", ["No", "Yes"]],
-    ["SelectMenu", "flightLog", "ControlPage", "Flight Log", [0,1,2],0,0, ["Off", "Playback", "Vibration"]],
-    ["SelectMenu", "lowVoltageAlarm", "ControlPage", "Low Voltage Alarm", [0,1,2,3,4],0,0, ["Off", "BEC", "2S LIPO", "BEC, Low Throttle", "2S LIPO, Low Throttle"]],
+    ["SelectMenu", "flightLog", "ControlPage", "Flight Log", [0, 1, 2], 0, 0, ["Off", "Playback", "Vibration"]],
+    ["SelectMenu", "lowVoltageAlarm", "ControlPage", "Low Voltage Alarm", [0, 1, 2, 3, 4], 0, 0, ["Off", "BEC", "2S LIPO", "BEC, Low Throttle", "2S LIPO, Low Throttle"]],
     ["ClosePage", "controlClose", "ControlPage"],
 ////////////////////////////////////////////////////////////////////////////////////////
     ["OpenPage", "driveSystemMenu", "DriveSystemPage", "Drive System"],
-    ["DataLabel","throttle", "DriveSystemPage", "Throttle: ", "0"],
-    ["Button", "setIdle", "DriveSystemPage", "Set Idle Throttle",0,0,0,0,0, "app.testButton()"],
+    ["DataLabel", "throttle", "DriveSystemPage", "Throttle: ", "0"],
+    ["Button", "setIdle", "DriveSystemPage", "Set Idle Throttle", 0, 0, 0, 0, 0, "app.testButton()"],
     ["Button", "setMax", "DriveSystemPage", "Set Max Throttle", "setMaxThrottle()"],
     ["SlideBar", "rpmSensorGr", "DriveSystemPage", "RPM Sensor G/R", "1", "0", "5"],
     ["ClosePage", "driveSystemClose", "DriveSystemPage"],
 ////////////////////////////////////////////////////////////////////////////////////////
     ["OpenPage", "govSettingsMenu", "GovernorSettingsPage", "Governor Settings"],
-    ["SelectMenu", "governorMode", "GovernorSettingsPage", "Governor Mode", [0,1,2],0,0, ["Off", "Elec", "Nitro"]],
+    ["SelectMenu", "governorMode", "GovernorSettingsPage", "Governor Mode", [0, 1, 2], 0, 0, ["Off", "Elec", "Nitro"]],
     ["SlideBar", "gain", "GovernorSettingsPage", "Gain", "50", "0", "100"],
     ["SlideBar", "rpm1", "GovernorSettingsPage", "RPM1", "1500", "500", "20000"],
     ["SlideBar", "rpm2", "GovernorSettingsPage", "RPM2", "1500", "500", "20000"],
@@ -186,17 +188,17 @@ var dataStruct = [
     ["ClosePage", "governorSettingsClose", "GovernorSettingsPage"],
 ////////////////////////////////////////////////////////////////////////////////////////
     ["OpenPage", "gpsSettingsMenu", "GpsSettingsPage", "GPS Settings"],
-    ["SelectMenu", "orientationLabel", "GpsSettingsPage", "Orientation Label", ["menuValue1", "MenuValue2"],0,0, ["menu1", "Menu2"]],
-    ["SelectMenu", "rxChannel", "GpsSettingsPage", "RX Channel", ["menuValue1", "MenuValue2"],0,0, ["menu1", "Menu2"]],
-    ["SelectMenu", "modeA", "GpsSettingsPage", "Mode A", ["menuValue1", "MenuValue2"],0,0, ["menu1", "Menu2"]],
-    ["SelectMenu", "modeB", "GpsSettingsPage", "Mode B", ["menuValue1", "MenuValue2"],0,0, ["menu1", "Menu2"]],
+    ["SelectMenu", "orientationLabel", "GpsSettingsPage", "Orientation Label", ["menuValue1", "MenuValue2"], 0, 0, ["menu1", "Menu2"]],
+    ["SelectMenu", "rxChannel", "GpsSettingsPage", "RX Channel", ["menuValue1", "MenuValue2"], 0, 0, ["menu1", "Menu2"]],
+    ["SelectMenu", "modeA", "GpsSettingsPage", "Mode A", ["menuValue1", "MenuValue2"], 0, 0, ["menu1", "Menu2"]],
+    ["SelectMenu", "modeB", "GpsSettingsPage", "Mode B", ["menuValue1", "MenuValue2"], 0, 0, ["menu1", "Menu2"]],
     ["SlideBar", "altFl", "GpsSettingsPage", "Altitude Fl", "1500", "0", "3000"],
     ["SlideBar", "gpsGain", "GpsSettingsPage", "GPS Gain", "1500", "0", "3000"],
     ["Button", "swingCompass", "GpsSettingsPage", "Swing Compass", "setMaxThrottle()"],
     ["ClosePage", "gpsSettingsClose", "GpsSettingsPage"],
 ////////////////////////////////////////////////////////////////////////////////////////
     ["OpenPage", "swashMixingMenu", "SwashMixingPage", "Swash Mixing"],
-    ["SelectMenu", "swashType", "SwashMixingPage", "Swash Type", ["menuValue1", "MenuValue2"],0,0, ["menu1", "Menu2"]],
+    ["SelectMenu", "swashType", "SwashMixingPage", "Swash Type", ["menuValue1", "MenuValue2"], 0, 0, ["menu1", "Menu2"]],
     ["SlideBar", "elevatorCyclic", "SwashMixingPage", "Elevator Cyclic", "50", "0", "100"],
     ["SlideBar", "aileronCyclic", "SwashMixingPage", "Aileron Cyclic", "50", "0", "100"],
     ["SlideBar", "collectivePitch", "SwashMixingPage", "Collective Pitch", "50", "0", "100"],
@@ -245,8 +247,8 @@ var dataStruct = [
 
     ////////////////////////////////////////////////////////////////////////////////////////
     ["OpenPage", "tailServoMenu", "TailServoPage", "Tail Servo"],
-    ["SelectMenu", "tailServoName", "TailServoPage", "Name", ["menuValue1", "MenuValue2"],0,0, ["menu1", "Menu2"]],
-    ["SelectMenu", "tailServoType", "TailServoPage", "Type", ["menuValue1", "MenuValue2"],0,0, ["menu1", "Menu2"]],
+    ["SelectMenu", "tailServoName", "TailServoPage", "Name", ["menuValue1", "MenuValue2"], 0, 0, ["menu1", "Menu2"]],
+    ["SelectMenu", "tailServoType", "TailServoPage", "Type", ["menuValue1", "MenuValue2"], 0, 0, ["menu1", "Menu2"]],
     ["GridOpen", "tailGridOpen", "Basic Page", 0, 0, 0, 0, 0, 0, "d"],
 
     ["GridLabel", "tailGrid1", "Basic Page", "", 0, 0, 0, 0, 0, "a"],
@@ -301,7 +303,7 @@ var dataStruct = [
     ["SlideBar", "cycGainLockedValue1", "CyclicBank1Page", "Gain Locked To", "50", "0", "100"],
     ["Switch", "selfTuneBell1", "CyclicBank1Page", "Self-Tune Bell", ["No", "Yes"]],
     ["SlideBar", "hillerDecay1", "CyclicBank1Page", "Hiller Decay", "100", "0", "200"],
-    ["SelectMenu", "selfLevel1", "CyclicBank1Page", "RPM Sensor G/R", ["menuValue1", "MenuValue2"],0,0, ["menu1", "Menu2"]],
+    ["SelectMenu", "selfLevel1", "CyclicBank1Page", "RPM Sensor G/R", ["menuValue1", "MenuValue2"], 0, 0, ["menu1", "Menu2"]],
     ["SlideBar", "cycBank1Precent", "CyclicBank1Page", "Precent", "50", "0", "100"],
     ["ClosePage", "cyclicBank1Close", "CyclicBank1Page"],
 
@@ -337,7 +339,7 @@ var dataStruct = [
     ["SlideBar", "cycGainLockedValue2", "CyclicBank2Page", "Gain Locked To", "50", "0", "100"],
     ["Switch", "selfTuneBell2", "CyclicBank2Page", "Self-Tune Bell", ["No", "Yes"]],
     ["SlideBar", "hillerDecay2", "CyclicBank2Page", "Hiller Decay", "100", "0", "200"],
-    ["SelectMenu", "selfLevel2", "CyclicBank2Page", "RPM Sensor G/R", ["menuValue1", "MenuValue2"],0,0, ["menu1", "Menu2"]],
+    ["SelectMenu", "selfLevel2", "CyclicBank2Page", "RPM Sensor G/R", ["menuValue1", "MenuValue2"], 0, 0, ["menu1", "Menu2"]],
     ["SlideBar", "cycBank2Precent", "CyclicBank2Page", "Precent", "50", "0", "100"],
     ["ClosePage", "cyclicBank2Close", "CyclicBank2Page"],
 ////////////////////////////////////////////////////////////////////////////////////////
@@ -367,7 +369,8 @@ var dataStruct = [
 
     ["OpenPage", "basic", "Basic Page", "Basic"],
 
-    ["CloseMenuPage", "closeBasicPage", "BasicPage", "Advanced",0,0,0,0,"#advanced", 0, 0, false]];
+    ["CloseMenuPage", "closeBasicPage", "BasicPage", "Advanced", 0, 0, 0, 0, "#advanced", 0, 0, false]
+];
 
 var menuElements = {};
 
@@ -378,9 +381,12 @@ var menuObjects = function (inputArray) {
     }
 
 
-
 }
 
 menuObjects(dataStruct);
 console.log(menuElements.fileName.value);
 var elementMenu = "";
+
+//console.log(JSON.stringify(menuElements));
+
+

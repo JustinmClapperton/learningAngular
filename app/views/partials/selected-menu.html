@@ -1,5 +1,3 @@
-
-
 <div>
     <nav class="navbar navbar-default" role="navigation">
         <div class="container-fluid">
@@ -8,23 +6,29 @@
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.container-fluid -->
     </nav>
 
-    <button ng-click="backToView()">Go Back</button>
 
     <div ng-repeat="element in elementArray | exactMatchFilter:elementMenu">
         <!--<div>{{element.type}} and {{element.id}}</div>-->
-        <div element="element" my-customer=""></div>
+        <div element="element" element-array="elementArray" my-customer=""></div>
     </div>
 
     <nav class="navbar navbar-default" role="navigation">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <h1 class="text-center">Back</h1>
 
+
+            <div class="btn-group btn-group-justified">
+                <div class="btn-group">
+                    <button class="btn btn-default" ng-click="backToView()"><h1 class="text-center">Back</h1></button>
+                </div>
+            </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.container-fluid -->
     </nav>
 </div>

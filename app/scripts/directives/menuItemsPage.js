@@ -17,13 +17,17 @@ webPracticeApp.directive('myCustomer', function () {
     return {
         restrict: 'A',
         scope: {
-            element: '='
+            element: '=',
+            elementArray: '='
         },
         templateUrl: elementURL,
         controller: function ($scope) {
-            var test = JSON.stringify($scope.element);
-            console.log("menuElement: " + test);
-            console.log($scope.element.type)
+            var test = JSON.stringify($scope.elementArray);
+            $scope.selectedOption = "Success"
+            $scope.changeOption = function(selectedItem){
+                $scope.selectedOption = selectedItem;
+               // alert(1);
+            }
 
         }
     };
